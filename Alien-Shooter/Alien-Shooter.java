@@ -1,7 +1,9 @@
 /*
-	Author:	Saint Linux
-	Project: Alien Shooter
-	Purpose: Implementation Sun Java GUI
+	Author	:	Atiqur Rahman
+	Project	:	Alien Shooter
+	Purpose	:	A java game I built during under-grad
+	Desc		:	Implementation using awt and swing
+	Date		:	August 27, 2008
  */
 
 import java.awt.BorderLayout;
@@ -448,3 +450,4 @@ public class MyProjectSTA {
         movingLabels.startAnimation();
     }
 }
+
