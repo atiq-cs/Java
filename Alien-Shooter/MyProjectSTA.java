@@ -179,6 +179,7 @@ class GameEnv extends JApplet implements ActionListener {
                 }
             }
         });
+        
         layeredPane.addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent e) {
                 if (status) {
@@ -445,9 +446,15 @@ public class MyProjectSTA {
             }
         });*/
         movingLabels.buildUI(f, f.getContentPane(), bgImage, fgImage, shipImage, wpnImage, fireImage);
-        f.setSize(1024, 768);
+        // Get screen resolution for active default device
+        GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+        int screen_width = gd.getDisplayMode().getWidth();
+        int screen_height = gd.getDisplayMode().getHeight();
+        // System.out.println("Screen width "+width);
+        // f.setSize(1024, 768);
+        // set the app size equal to display size
+        f.setSize(screen_width, screen_height);
         f.setVisible(true);
         movingLabels.startAnimation();
     }
 }
-
